@@ -25,7 +25,6 @@
             "inline":[
                 "sudo mv /tmp/r1soft.repo /etc/yum.repos.d/",
                 "sudo yum update -y",
-                "sudo yum install epel-release -y",
                 "sudo yum install r1soft-cdp-enterprise-server -y",
                 "sudo r1soft-setup  --user admin --pass strong --http-port 80",
                 "sudo systemctl cdp-server restart",
