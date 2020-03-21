@@ -5,13 +5,14 @@
       "region": "us-east-1",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
-
       "ssh_keypair_name" : "Packer",
       "ssh_private_key_file" : "/home/centos/.ssh/id_rsa",
-
-      "source_ami": "ami-0fc61db8544a617ed",
-      "ami_name": "golden_image {{timestamp}}"
-    }],
+      "ami_name": "golden_image {{timestamp}}",
+      "source_ami_filter": {  
+        "owners": ["137112412989"], 
+        "most_recent": true 
+      }
+}],
     "_comment2": "Comment here",
     "provisioners": [
         {
