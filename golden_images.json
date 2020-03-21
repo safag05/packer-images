@@ -6,5 +6,18 @@
       "ssh_username": "ec2-user",
       "source_ami": "ami-0fc61db8544a617ed",
       "ami_name": "golden_image {{timestamp}}"
-    }]
-  }
+    }],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "./test.txt",
+            "destination": "/tmp/"
+        },
+        {
+            "type": "shell",
+            "inline":[
+                "sudo yum update -y"
+            ]
+        }
+    ]
+}
