@@ -8,6 +8,7 @@
       "source_ami": "ami-0fc61db8544a617ed",
       "ami_name": "golden_image {{timestamp}}"
     }],
+    "_comment2": "Comment here",
     "provisioners": [
         {
             "type": "file",
