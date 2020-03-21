@@ -2,7 +2,7 @@
     "_comment": "Comment here",
     "builders": [{
       "type": "amazon-ebs",
-      "region": "us-east-1",
+      "region": "{{user `region`}}",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
       "ssh_keypair_name" : "Packer",
